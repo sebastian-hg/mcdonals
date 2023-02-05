@@ -1,6 +1,6 @@
-package com.mcdonalds.ecommerce.configuration;
+package com.mcdonalds.ecommerce.annotation;
 
-import com.mcdonalds.ecommerce.configuration.impl.EnumNamePatternValidator;
+import com.mcdonalds.ecommerce.annotation.impl.EnumNamePatternValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

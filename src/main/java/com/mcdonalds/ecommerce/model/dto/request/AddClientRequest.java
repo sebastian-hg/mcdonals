@@ -1,14 +1,12 @@
 package com.mcdonalds.ecommerce.model.dto.request;
 
-import com.mcdonalds.ecommerce.configuration.EnumNamePattern;
+import com.mcdonalds.ecommerce.annotation.EnumNamePattern;
 import com.mcdonalds.ecommerce.model.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Data

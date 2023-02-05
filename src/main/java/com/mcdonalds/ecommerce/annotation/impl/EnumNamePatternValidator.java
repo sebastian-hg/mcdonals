@@ -1,6 +1,6 @@
-package com.mcdonalds.ecommerce.configuration.impl;
+package com.mcdonalds.ecommerce.annotation.impl;
 
-import com.mcdonalds.ecommerce.configuration.EnumNamePattern;
+import com.mcdonalds.ecommerce.annotation.EnumNamePattern;
 import org.springframework.util.StringUtils;
 
 import javax.validation.ConstraintValidator;

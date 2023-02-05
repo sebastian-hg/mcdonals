@@ -1,6 +1,6 @@
 package com.mcdonalds.ecommerce.annotation;
 
-import com.mcdonalds.ecommerce.configuration.impl.ClientVIPValidator;
+import com.mcdonalds.ecommerce.annotation.impl.ClientVIPValidator;
 
 
 import javax.validation.Constraint;

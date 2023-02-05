@@ -1,4 +1,4 @@
-package com.mcdonalds.ecommerce.configuration.impl;
+package com.mcdonalds.ecommerce.annotation.impl;
 
 import com.mcdonalds.ecommerce.annotation.IsVipValidConstraint;
 
