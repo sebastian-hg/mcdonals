@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "961027ba-8377-4eaa-8439-ffae045c7f5d",
+		"name": "Ecommerce",
+		"description": "ecommerce project to make purchases at mcdonalds",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "agregar carrito de compras",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n    \"clientId\": 1,\n    \"isVip\":true\n}"
+				},
+				"url": {
+					"raw": "localhost:8099/mcdonalds/shopping-cart",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"mcdonalds",
+						"shopping-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver numero de productos del carrito",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:8099/mcdonalds/shopping-cart/1/items",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"mcdonalds",
+						"shopping-cart",
+						"1",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ver compras",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:8099/mcdonals/clients/1/purchases",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"mcdonals",
+						"clients",
+						"1",
+						"purchases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalizar Carrito de compras",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:8099/mcdonals/shopping-cart/1/checkout",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"mcdonals",
+						"shopping-cart",
+						"1",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar carrito de compras",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8099/mcdonalds/shopping-cart/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"mcdonalds",
+						"shopping-cart",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agregar producto al carrito",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": 3,\n    \"numberOfProduct\": 4\n}"
+				},
+				"url": {
+					"raw": "localhost:8099/mcdonalds/shopping-cart/1/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"mcdonalds",
+						"shopping-cart",
+						"1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar producto del carrito",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8099/mcdonalds/shopping-cart/2/product/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"mcdonalds",
+						"shopping-cart",
+						"2",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
