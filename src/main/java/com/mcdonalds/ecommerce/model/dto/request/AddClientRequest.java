@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Data
@@ -17,8 +18,8 @@ public class AddClientRequest {
     @NotNull(message = "documentID can not be null ")
     private Integer documentID;
 
-    @NotNull
+    @NotBlank(message = "Gender is mandatory")
     @EnumNamePattern(enumClass = Gender.class)
-    private Gender gender;
+    private String gender;
     private String nameComplete;
 }

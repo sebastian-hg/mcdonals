@@ -78,6 +78,7 @@ gradle.properties
 
 ### Maven ###
 target/
+**/target/
 
 # Ignore Gradle GUI config
 gradle-app.setting
