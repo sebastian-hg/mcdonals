@@ -9,7 +9,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import javax.validation.Validation;
 import javax.validation.Validator;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(SpringExtension.class)
 class AnnotationValidationTest {
 
@@ -22,11 +22,17 @@ class AnnotationValidationTest {
     }
 
     @Test
-    void whenAllAcceptable_thenShouldNotGiveConstraintViolations() {
+    void givenNoGender_whenValidated_thenShouldBeTwoViolation() {
         var request = AddClientRequest.builder().documentID(522525).nameComplete("jose").build();
 
         var violations = validator.validate(request);
-        assertFalse(violations.isEmpty());
+        assertEquals(2, violations.size());
+    }
+    @Test
+    void givenBadGender_whenValidated_thenShouldBeOneViolation() {
+        var request = AddClientRequest.builder().documentID(522525).nameComplete("jose").gender("OTHER").build();
+        var violations = validator.validate(request);
+        assertEquals(1, violations.size());
     }
 }
 
