@@ -76,6 +76,9 @@ Temporary Items
 build/
 gradle.properties
 
+### Maven ###
+target/
+
 # Ignore Gradle GUI config
 gradle-app.setting
 
